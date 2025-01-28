@@ -20,4 +20,5 @@ COPY . .
 EXPOSE 8000
 
 # Command to keep API running
-CMD ["uvicorn", "app.endpoint:app", "--host", "0.0.0.0", "--port", "8000", "--reload"]
+CMD ["uvicorn", "endpoint:app", "--host", "0.0.0.0", "--port", "8000", "--reload"]
+

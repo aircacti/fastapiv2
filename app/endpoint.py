@@ -49,7 +49,7 @@ def get_db():
 class Task(BaseModel):
     title: str = Field(..., min_length=3, max_length=100)
     description: Optional[str] = Field(None, max_length=300)
-    status: str = Field(default="TODO", regex="^(TODO|IN_PROGRESS|DONE)$")
+    status: str = Field(default="TODO", pattern="^(TODO|IN_PROGRESS|DONE)$")
 
 @app.get("/")
 def read_root():
